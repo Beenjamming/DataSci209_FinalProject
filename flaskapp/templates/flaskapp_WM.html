@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>flaskapp site for ProtectingYoungPassengers</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://unpkg.com/@observablehq/runtime@4"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .nav {
+            background: #333;
+            color: #ffffff;
+            padding: 15px 0;
+        }
+
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .nav a:hover {
+            color: #cccccc;
+        }
+
+        .nav .active {
+            font-weight: bold;
+        }
+
+        .img-half-size {
+            width: 50%;
+            display: block;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav flex-row justify-content-between p-3 rounded">
+        <a class="nav-link active" href="#video">Video</a>
+        <a class="nav-link" href="#viz1712627938338">Dashboard</a>
+        <a class="nav-link" href="#details">Incident Details</a>
+        <a class="nav-link" href="https://www.kidsandcars.org/car-theft/media-resources" tabindex="-1" >Kids and Car Safety</a>
+    </div>
+
+    <div class="container">
+        <h2>DataSci 209: Protecting Young Passengers</h2>
+        <img class="img-half-size" src="{{ url_for('static', filename='PYPlogo.jpeg') }}"/>
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+ <!-- Your embedded text here -->
+    <div class="container">
+        <p>
+            In 2023, there were 131 instances of car theft with children in the car. Each tragic occurrence is preventable, as parents should not leave their children in the car and should lock car doors.
+			<br/>
+            <br/>
+            Kids and Car Safety is a non-profit dedicated to protecting children from car-related threats, including car theft. For our final project, Elijah Mercer, Will Meyer, and Ben Michaels used data provided by Kids and Car Safety (KACS) to create an interactive dashboard. The goal of our dashboard was to support KACS through raising awareness, so our target audiences were the general public and the press.
+			<br/>
+            <br/>
+            Below, you’ll find the interactive dashboard, and some instructions showing how to interact with the data features. At the bottom of the page, we also include brief descriptions of the incidents. You can search by date, location, or incident description.
+        </p>
+    </div>
+
+
+
+       <!-- Centered Video -->
+       <div class="container mt-5" id="video">
+        <div class="d-flex justify-content-center">
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/A-wdJDoykYA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="d-flex justify-content-center"
+        id='viz1712627938338' 
+        style='position: relative'><noscript><a 
+        href='#'><img alt='InstructionLanding ' 
+        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProject_17095205382480&#47;InstructionLanding&#47;1_rss.png' 
+        style='border: none' /></a></noscript><object 
+        class='tableauViz'  
+        style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+        <param name='embed_code_version' value='3' /> 
+        <param name='site_root' value='' />
+        <param name='name' value='FinalProject_17095205382480&#47;InstructionLanding' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProject_17095205382480&#47;InstructionLanding&#47;1.png' /> 
+        <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' /><param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' /></object>
+    </div>
+    
+    <br/>
+    <hr/>
+    <br/>
+
+    <div id="details">
+        <iframe width="100%" height="518" frameborder="0"
+        src="https://observablehq.com/embed/a4a4d5f38d3cd2e8@54?cells=viewof+search%2Cviewof+inputs&api_key=a683f860cbc13c99273bee72a64e29ba70d90ad9&banner=false"></iframe>
+
+    </div>                  
+</body>
+</html>
+          
+            
+<script type='text/javascript'>                    
+    var divElement = document.getElementById('viz1712627938338');                    
+    var vizElement = divElement.getElementsByTagName('object')[0];                    
+    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1466px';vizElement.style.height='795px';} 
+    else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1466px';vizElement.style.height='795px';} 
+    else { vizElement.style.width='100%';vizElement.style.height='727px';}                     
+    var scriptElement = document.createElement('script');                    
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+    </script>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
