@@ -2,28 +2,36 @@
 <html>
 <head>
     <title>flaskapp site for ProtectingYoungPassengers</title>
+    <link rel="stylesheet" href="//assets.jnt.cloud/font-awesome/5.15.4/fontawesome.css" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://unpkg.com/@observablehq/runtime@4"></script>
 
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #ecf8fb;
+            font-size: 18px;
         }
 
         .container {
-            width: 80%;
+            width: 60%;
             margin: auto;
             overflow: hidden;
         }
-
+        .navbar {
+        font-size: 26px; 
+        }
+        .navbar-brand {
+        font-size: 38px; 
+        }
         .nav {
-            background: #333;
+            background: #112748;
             color: #ffffff;
             padding: 15px 0;
+           
         }
 
         .nav a {
@@ -53,19 +61,101 @@
     </style>
 </head>
 <body>
-    <div class="nav flex-row justify-content-between p-3 rounded">
-        <a class="nav-link active" href="#">Active</a>
-        <a class="nav-link" href="#viz1712627938338">Dashboard</a>
-        <a class="nav-link" href="#details">Incident Details</a>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <nav class="navbar navbar-expand-lg p-3 rounded" style="background-color: #112748;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: #ed393a;">DataSci 209: Section 3 Group 3</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#video" style="color: #ffffff;">Video</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#viz1712627938338" style="color: #ffffff;">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#details" style="color: #ffffff;">Incident Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.kidsandcars.org/car-theft/media-resources" tabindex="-1" style="color: #ffffff;">Kids and Car Safety</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<br/>
+<hr class="my-5">
+<br/>
+
+    <div class="d-flex justify-content-center">
+     
+            <br/>
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-body" style="background-color: #f8f9fa;">
+                        <h2 class="card-title">Protecting Young Passengers</h2>
+                        <p class="card-text text-justify">
+                            In 2023, there were 130 instances of car theft with children in the car. Each tragic occurrence is preventable, as parents should not leave their children in the car and should lock car doors.
+                            <br/>
+                            <br/>
+                            Kids and Car Safety is a non-profit dedicated to protecting children from car-related threats, including car theft. For our final project, Elijah Mercer, Will Meyer, and Ben Michaels used data provided by Kids and Car Safety (KACS) to create an interactive dashboard. The goal of our dashboard was to support KACS through raising awareness, so our target audiences were the general public and the press.
+                            <br/>
+                            <br/>
+                            Below, you’ll find the interactive dashboard, and some instructions showing how to interact with the data features. At the bottom of the page, we also include brief descriptions of the incidents. You can search by date, location, or incident description.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <br/>
+    <hr class="my-5">
+    <br/>
+
+ 
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-5">
+            <div class="card shadow">
+                <div class="card-body" style="background-color: #f8f9fa;">
+                    <p class="card-text text-justify">
+                        This is a video created to raise awareness about the dangers of leaving children in cars. 
+                        We hope that watching this video will help to prevent future incidents of car theft with children in the car.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+       <!-- Centered Video -->
+       <div class="container mt-5" id="video">
+   
+        <div class="d-flex justify-content-center">
+            <div class="embed-responsive embed-responsive-16by9 shadow">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/A-wdJDoykYA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 
-    <div class="container">
-        <h2>DataSci 209: Protecting Young Passengers</h2>
-        <img class="img-half-size" src="{{ url_for('static', filename='PYPlogo.jpeg') }}"/>
-    </div>
+    <br/>
+    <hr class="my-5">
+    <br/>
 
-    <div class='tableauPlaceholder' 
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-5">
+            <div class="card shadow">
+                <div class="card-body" style="background-color: #f8f9fa;">
+                    <p class="card-text text-justify">
+                        The dashboard below shows the number of incidents of car theft with children in the car by state. You can interact with the dashboard by clicking on the state you want to learn more about. The dashboard will show you the number of incidents in that state, as well as the number of children involved in the incidents.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="d-flex justify-content-center"
         id='viz1712627938338' 
         style='position: relative'><noscript><a 
         href='#'><img alt='InstructionLanding ' 
@@ -78,7 +168,7 @@
         <param name='site_root' value='' />
         <param name='name' value='FinalProject_17095205382480&#47;InstructionLanding' />
         <param name='tabs' value='no' />
-        <param name='toolbar' value='yes' />
+        <param name='toolbar' value='no' />
         <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProject_17095205382480&#47;InstructionLanding&#47;1.png' /> 
         <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
         <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
@@ -86,11 +176,35 @@
         <param name='filter' value='publish=yes' /></object>
     </div>
     
-    <div id="details">
-        <iframe width="100%" height="518" frameborder="0"
-        src="https://observablehq.com/embed/a4a4d5f38d3cd2e8@54?cells=viewof+search%2Cviewof+inputs&api_key=a683f860cbc13c99273bee72a64e29ba70d90ad9&banner=false"></iframe>
+    <br/>
+    <hr class="my-5">
+    <br/>
 
-    </div>                  
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-5">
+            <div class="card shadow">
+                <div class="card-body" style="background-color: #f8f9fa;">
+                    <p class="card-text text-justify">
+                    The searchable table below shows the details of each incident of car theft with children in the car. You can search by date, city, state, or incident description.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="details" class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card shadow">
+                    <div class="card-body p-0">
+                        <iframe class="embed-responsive-item" style="width: 100%;" height="518" frameborder="0"
+                        src="https://observablehq.com/embed/a4a4d5f38d3cd2e8@56?cells=viewof+search%2Cviewof+inputs&api_key=e21eee4f61be2e6c20529a40a28fb677891b1863&banner=false">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
           
