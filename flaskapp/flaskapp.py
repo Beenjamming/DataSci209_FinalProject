@@ -13,5 +13,10 @@ def home():
     file=url_for('static', filename='about9.jpg')
     return render_template('flaskapp.html', file=file)
 
+@app.route('/about')
+def about():
+    file=url_for('static', filename='PYPlogo.jpeg')
+    return render_template('About.html', file=file)
+
 if __name__ == "__main__":
     app.run()
